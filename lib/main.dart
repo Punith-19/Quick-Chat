@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quick_chat/common/theme/dark_theme.dart';
+import 'package:quick_chat/common/theme/light_theme.dart';
 
 import 'feature/welcome/pages/welcome_page.dart';
 
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.dark(),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
+      themeMode: ThemeMode.system,
       home: WelcomePage(),
     );
   }
